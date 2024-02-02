@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-secondary">
+            <div class="form-header">
+                <h1>Payment form example</h1>
+            </div>
+        </li>
+        <li class="list-group-item">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </symbol>
+                            </svg>
+                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <div>
+                                  Some fields are missing
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Card Number</p>
+                            <input class="form-control mb-3 pt-2" type="text" placeholder="XXXXXXXXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">CVV/CVC</p>
+                            <input class="form-control mb-3 pt-2" type="password" placeholder="***">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Amount</p>
+                            <input class="form-control mb-3 pt-2" type="text" placeholder="$0.00">
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">First name</p>
+                                <input class="form-control mb-3 pt-2" type="text">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">Last name</p>
+                                <input class="form-control mb-3 pt-2" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">City</p>
+                                <input class="form-control mb-3 pt-2" type="text">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">State</p>
+                                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                    <datalist id="datalistOptions">
+                                    <option value="California">
+                                    <option value="New York">
+                                    <option value="Washington">
+                                    <option value="Florida">
+                                    <option value="Texas">
+                                    </datalist>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex flex-column">
+                                <p class="text mb-1">Postal Code</p>
+                                <input class="form-control mb-3 pt-2" type="text">
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text mb-1">We accept: </p>
+                            <div class="d-flex">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">
+                                            Mastercard
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">
+                                            Visa
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">
+                                            PayPal
+                                        </label>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="text mb-1">Message:</p>
+                            <div class="input-group">
+                                <textarea class="form-control"></textarea>
+                              </div>
+                        </div>
+                    </div>
+                        
+                        <div class="row">
+                            <div class="col-6"></div>
+                            <div class="col-6"> <p class="text-muted small">Add any notes here.</p> </div>
+                        </div>
+
+                    </div>
+              </div>
+        </li>
+
+        <li class="list-group-item list-group-item-secondary">
+            <div class="row">
+                <div class="col-9"><h1 class="invisible">X</h1></div>
+                <div class="col-3"> <p class="text-muted small">
+                    <button type="button" class="btn btn-secondary">Close</button>
+                    <button type="button" class="btn btn-success">Pay</button>
+                </div>
+            </div>
+        </li>
+      </ul>
+
+</body>
+</html>
